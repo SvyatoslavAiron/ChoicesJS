@@ -442,6 +442,10 @@
     text-align: left;
 }
 
+ul,
+li{
+   list-style: none;
+
 .breadcrumbs__list {
     display: flex;
 }
