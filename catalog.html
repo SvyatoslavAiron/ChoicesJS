@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="description" content="On this site I will study CSS, HTML and Java Script, React">
+   <meta name="keywords" content="Java-Script, JS, Java Script, React, HTML, CSS, SCSS, SASS, Home">
+   <title>Catalog</title>
+   <link rel="icon" href="assets/images/heart-like.svg">
+   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+   <link rel="stylesheet" href="assets/css/catalog-style.min.css">
+</head>
+<body>
+   <div class="wrapper">
+      <div class="header">
+         <div class="header__top header-top">
+            <div class="header-top__container container">
+               <div class="header-top__menu menu">
+                  <button class="menu__back-btn"><svg>
+                        <use xlink:href="./assets/images/sprite.svg#back-icon"></use>
+                     </svg>Назад</button>
+                  <div class="bottom-transition"></div>
+                  <nav class="menu__body">
+                     <ul class="menu__list">
+                        <li class="menu__item menu__item_mobile"><a href="" class="menu__link">Личный кабинет</a></li>
+                        <li class="menu__item menu__item_mobile"><a class="menu__link menu__link-next"><span>Каталог товаров</span><svg>
+                                 <use xlink:href="./assets/images/sprite.svg#next-icon"></use>
+                              </svg></a></li>
+                        <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Оплата и доставка</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <a href="" class="header-top__user"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#profile-icon"></use>
+                  </svg><span>Личный кабинет</span></a>
+               <button type="button" class="menu__btn"><span></span></button>
+            </div>
+         </div>
+         <div class="header__center header-center">
+            <div class="header-center__container container">
+               <a href="" class="header-center__logo"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#logo"></use>
+                  </svg></a>
+               <div class="header-center__search">
+                  <form action="#" class="header-search">
+                     <button type="submit" class="header-search__btn"><svg>
+                           <use xlink:href="./assets/images/sprite.svg#search-icon"></use>
+                        </svg></button>
+                     <input type="text" class="header-search__input" placeholder="Поиск">
+                  </form>
+               </div>
+               <div class="header-center__actions header-actions">
+                  <a href="#" class="header-actions__location"><svg>
+                        <use xlink:href="./assets/images/sprite.svg#location-logo"></use>
+                     </svg>Москва</a>
+               </div>
+               <div class="header-actions__phones header-phones">
+                  <div class="header-phones__inner">
+                     <div class="header-phones__wrapper">
+                        <a href="tel:8-800-777-49-67" class="header-phones__number">8-800-777-49-67</a>
+                        <button class="header-phones__btn"><svg>
+                              <use xlink:href="./assets/images/sprite.svg#arrow-icon"></use>
+                           </svg></button>
+                     </div>
+                     <ul class="header-phones__list">
+                        <li class="header-phones__item"><a href="tel:8-800-777-49-68" class="header-phones__number">8-800-777-49-68</a></li>
+                        <li class="header-phones__item"><a href="tel:8-800-777-49-69" class="header-phones__number">8-800-777-49-69</a></li>
+                        <li class="header-phones__item"><a href="tel:8-800-777-49-70" class="header-phones__number">8-800-777-49-70</a></li>
+                     </ul>
+                  </div>
+                  <a class="header-phones__order-call" href="">Заказать звонок</a>
+               </div>
+               <button class="header-action__favorite"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#heart-like"></use>
+                  </svg></button>
+               <div class="header-center__cart header-cart">
+                  <a href="" class="header-cart__icon"><svg>
+                        <use xlink:href="./assets/images/sprite.svg#cart-icon"></use>
+                     </svg><span>0</span></a>
+                  <div class="header-cart__body">
+                     <div class="header-cart__balance">0 р.</div>
+                     <a href="" class="header-cart__checkout">Оформить заказ</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header__bottom header-bottom">
+            <nav class="header-bottom__menu menu-catalog">
+               <div class="menu-catalog__container container">
+                  <ul class="menu-catalog__list">
+                     <li class="menu-catalog__item"><button id="menu1" class="menu-catalog__link">Каталог ножей</button></li>
+                     <li class="menu-catalog__item"><button id="menu2" class="menu-catalog__link">Клинковое оружие</button></li>
+                     <li class="menu-catalog__item"><button class="menu-catalog__link menu-catalog__link_not-active">Сувенирные изделия</button></li>
+                     <li class="menu-catalog__item"><button class="menu-catalog__link menu-catalog__link_not-active">Фонари ARMYTEK</button></li>
+                     <li class="menu-catalog__item"><button class="menu-catalog__link menu-catalog__link_not-active">Сопуствующие товары</button></li>
+                  </ul>
+               </div>
+               <div class="header-bottom__sub-menu sub-menu-catalog">
+                  <div class="sub-menu-catalog__container container">
+                     <div id="subMenu1" class="sub-menu-catalog__block">
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Категория ножей</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="http://localhost:3000/catalog.html" class="sub-menu-catalog__link sub-menu-catalog__link_active">Разделочные ножи</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Туристические ножи</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи охотничьи</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Булатные ножи</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из дамаска</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Тактического назначения</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Метательные ножи</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Мачете и кукри</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи кухонные</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Производство ножей</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи АИР</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи ЗИК</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи ЗЗОСС</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи РОСоружие</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из дамаска</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи Оружейник</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Булат Сергея Баранова</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Булат Андрея Умерова</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи Златко</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи Стиль-М</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Оружейная компания</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Ножи по маркам стали</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 40х102С2М</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 95х18</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 100х13м</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 110х18м-ШД</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 50х14МФ</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали AUS-8</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали К340</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали M390</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали ЭП-766</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Заточка и полировка ножей</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Паста ГОИ</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Алмазная паста</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Бруски и камни для заточки</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Заточные системы</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Ножевая мастерская</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножевые клинки</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Заготовки для ножей</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Литье для ножей</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Материалы для рукоятей</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Уход за рукоятиями ножей</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                     </div>
+                     <div id="subMenu2" class="sub-menu-catalog__block">
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Производство ножей</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи АИР</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи ЗИК</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи ЗЗОСС</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи РОСоружие</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из дамаска</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи Оружейник</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Булат Сергея Баранова</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Булат Андрея Умерова</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи Златко</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи Стиль-М</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Оружейная компания</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Ножи по маркам стали</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 40х102С2М</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 95х18</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 100х13м</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 110х18м-ШД</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали ЭИ-107 ТЦ</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали 50х14МФ</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали AUS-8</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали К340</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали M390</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножи из стали ЭП-766</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Заточка и полировка ножей</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Паста ГОИ</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Алмазная паста</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Бруски и камни для заточки</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Заточные системы</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                        <div class="sub-menu-catalog__column">
+                           <a href="" class="sub-menu-catalog__category">Ножевая мастерская</a>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <ul class="sub-menu-catalog__list">
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Ножевые клинки</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Заготовки для ножей</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Литье для ножей</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Материалы для рукоятей</a></li>
+                              <li class="sub-menu-catalog__item"><a href="" class="sub-menu-catalog__link">Уход за рукоятиями ножей</a></li>
+                           </ul>
+                           <div class="sub-menu-catalog__decor"></div>
+                           <a href="" class="sub-menu-catalog__see-all">Смотреть все</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <main class="main">
+         <div class="header-catalog">
+            <div class="container header-catalog__container">
+               <h1 class="header-catalog__title">Разделочные ножи</h1>
+               <nav class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item"><a href="http://localhost:3000" class="breadcrumbs__link"><span>Главная</span><svg>
+                              <use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use>
+                           </svg></a></li>
+                     <li class="breadcrumbs__item"><span class="breadcrumbs__current">Разделочные ножи</span></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <div class="catalog">
+            <div class="catalog__container container">
+               <div class="catalog__control">
+                  <select name="form[]" class="control">
+                     <option value="1">По популярности</option>
+                     <option value="2">Дешевле</option>
+                     <option value="3">Дороже</option>
+                     <option value="4">По рейтингу</option>
+                  </select>
+               </div>
+               <div class="catalog__row">
+                  <div class="catalog__filter"></div>
+                  <div class="catalog__product"><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div><div class="product-card">
+      <div class="product-card__top">
+         <div class="product-card__img"><img src="./assets/images/product-card__img.jpeg" alt=""></div>
+      </div>
+      <div class="product-card__center">
+         <div class="product-card__name">Нож Лиса</div>
+         <div class="product-card__description">
+            <div class="product-card__size">95х18</div>
+            <div class="product-card__materials">Орех, Алюминий</div>
+         </div>
+         <div class="product-card__body">
+            <ul class="product-card__rating rating">
+               <li class="rating__item" value="1"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="2"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="3"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="4"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+               <li class="rating__item" value="5"><svg>
+                     <use xlink:href="./assets/images/sprite.svg#star"></use>
+                  </svg></li>
+            </ul>
+            <a href="" class="product-card__reviews">12 отзывов</a>
+         </div>
+      </div>
+      <div class="product-card__bottom">
+         <div class="product-card__interaction">
+            <div class="product-card__price">2 719 р.</div>
+            <a href="" class="product-card__compare"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__compare"></use>
+               </svg></a>
+            <a href="" class="product-card__favorite"><svg>
+                  <use xlink:href="./assets/images/sprite.svg#product-card__favorite"></use>
+               </svg></a>
+         </div>
+         <button type="button" class="product-card__btn"><span>В корзину</span><svg>
+               <use xlink:href="./assets/images/sprite.svg#product-card__btn-icon"></use>
+            </svg></button>
+      </div>
+   </div></div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <div class="footer">
+         <div class="footer__description description-footer">
+            <div class="description-footer__container container">
+               <div class="description-footer__title">Златоустовские ножи интернет-магазин "ЗЛАТМАКС"</div>
+               <div class="description-footer__text">Наш интернет-магазин "ЗЛАТМАКС" предлагает Вам ножи очень высокого качества из города оружейников - Златоуста. Златоустовские ножи известны и популярны среди потребителей как на российским рынке, так и за рубежом: ножи охотничьи, хозяйственные, туристические, рыбацкие, складные и метательные. Нож Златоуста - это идеальный друг и товарищ в повседневной жизни и в экстремальных ситуациях. На многую продукцию распространяется гарантия до 10 лет - это один из главных показателей качества. Для Вас на нашем сайте "zlatmax" предложен огромный ассортимент Златоустовских ножей. Наши менеджеры помогут определиться и подобрать самый лучший Златоустовский нож, ориентируясь на Ваши пожелания.</div>
+            </div>
+         </div>
+         <div class="footer__container container">
+            <div class="footer__rows footer-rows footer-rows_one">
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">ИНФОРМАЦИЯ<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <nav class="footer-rows__nav spoiler-content">
+                     <ul class="footer-rows__list footer-list">
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Златоустовские ножи в Москве и Московской области</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Ножевые стали</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">О нас</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Условия оплаты и доставки</a></li>
+                        <li class="footer-list__item"><a href="" class="footer-list__link">Политика конфиденциальности</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">СЛУЖБА ПОДДЕРЖКИ<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <ul class="footer-rows__list footer-list spoiler-content">
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Контактная информация</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Возврат товара</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Карта сайта</a></li>
+                  </ul>
+               </div>
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">ДОПОЛНИТЕЛЬНО<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <ul class="footer-rows__list footer-list spoiler-content">
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Подарочные сертификаты</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Партнеры</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Товары со скидкой</a></li>
+                  </ul>
+               </div>
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">ЛИЧНЫЙ КАБИНЕТ<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <ul class="footer-rows__list footer-list spoiler-content">
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Личный кабинет</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">История заказов</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Мои закладки</a></li>
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Рассылка новостей</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="footer__rows footer-rows footer-rows_two">
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">КОНТАКТЫ<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <ul class="footer-rows__list footer-list spoiler-content">
+                     <li class="footer-list__item"><a href="tel:+88007774967" class="footer-list__link footer-list__link_1"><svg>
+                              <use xlink:href="./assets/images/sprite.svg#icon-phone"></use>
+                           </svg><span>8 (800) 777-49-67</span></a></li>
+                     <li class="footer-list__item"><a href="calendars://" class="footer-list__link footer-list__link_2"><svg>
+                              <use xlink:href="./assets/images/sprite.svg#icon-clock"></use>
+                           </svg><span>Пн-Пт<br>7:00 - 16:00 (МСК)</span></a></li>
+                     <li class="footer-list__item"><a href="https://maps.app.goo.gl/kL5k5gzvwRhzvuoQA" target="_blank" class="footer-list__link footer-list__link_3"><svg>
+                              <use xlink:href="./assets/images/sprite.svg#icon-location-logo"></use>
+                           </svg><span>Златоуст,<br>ул. Шоссейная,<br>д. 1, офис «6Б»</span></a></li>
+                     <li class="footer-list__item"><a href="mailto:info@zlatmax.ru" class="footer-list__link footer-list__link_4"><svg>
+                              <use xlink:href="./assets/images/sprite.svg#icon-mail"></use>
+                           </svg><span>info@zlatmax.ru</span></a></li>
+                     <li class="footer-list__item">
+                        <ul class="footer-rows__social footer-social-list">
+                           <li class="footer-social-list__item"><a href="" class="footer-social-list__link"><img src="./assets/images/footer-facebook.png" alt=""></a></li>
+                           <li class="footer-social-list__item"><a href="" class="footer-social-list__link"><img src="./assets/images/footer-viber.png" alt=""></a></li>
+                           <li class="footer-social-list__item"><a href="" class="footer-social-list__link"><img src="./assets/images/footer-telegram.png" alt=""></a></li>
+                           <li class="footer-social-list__item"><a href="" class="footer-social-list__link"><img src="./assets/images/footer-Whatsapp.png" alt=""></a></li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">ПОЛЕЗНЫЕ ССЫЛКИ<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <ul class="footer-rows__list footer-list spoiler-content">
+                     <li class="footer-list__item"><a href="" class="footer-list__link">Способы оплаты и доставки</a></li>
+                  </ul>
+               </div>
+               <div class="footer-rows__column">
+                  <div class="footer-rows__title spoiler-open-btn">НАША ГАРАНТИЯ<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <ul class="footer-rows__list footer-list spoiler-content">
+                     <li class="footer-list__item">Недовольны своей покупкой? Вы можете вернуть ее в течении 30 дней с даты получения, согласно <a href="" class="footer-list__link footer-list__link_rules">нашим правилам</a></li>
+                  </ul>
+               </div>
+               <div class="footer-rows__column footer-rows__column_form">
+                  <div class="footer-rows__title spoiler-open-btn spoiler-open-btn_active">НОВОСТНАЯ РАССЫЛКА<svg><use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use></svg></div>
+                  <div class="spoiler-content spoiler-content_active">
+                     <div class="footer-rows__text">Подпишитесь прямо сейчас!</div>
+                     <form action="#" method="post" class="footer-rows__form footer-form">
+                        <div class="footer-form__line">
+                           <input class="footer-form__input" type="email" placeholder="example@gmail.com">
+                           <button type="submit" class="footer-form__btn"><svg>
+                                 <use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use>
+                              </svg></button>
+                        </div>
+                        <label class="footer-form__label" for="consent">
+                           <input class="footer-form__checkbox" id="consent" type="checkbox">
+                           <span class="footer-form__checkbox-style"><svg>
+                                 <use xlink:href="./assets/images/sprite.svg#icon-check"></use>
+                              </svg></span>
+                           <div class="footer-form__text">Я прочитал Условия соглашения и согласен с условиями</div>
+                        </label>
+                     </form>
+                  </div>
+               </div>
+            </div>
+            <div class="footer__reference reference">
+               <div class="reference__text">Все материалы, размещенные на сайте, носят справочный характер и не являются публичной офертой, определяемойположениями Статьи 437 Гражданского кодекса Российской Федерации. При копировании материалов гиперссылка на www.zlatmax.ru обязательна!</div>
+               <div class="reference__copyright">Златоустовские ножи <span>www.zlatmax.ru ©</span></div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="assets/js/catalogJS.min.js"></script>
+</body>
+</html>
