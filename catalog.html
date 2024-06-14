@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="description" content="On this site I will study CSS, HTML and Java Script, React">
+   <meta name="keywords" content="Java-Script, JS, Java Script, React, HTML, CSS, SCSS, SASS, Home">
+   <title>Catalog</title>
+   <link rel="icon" href="assets/images/heart-like.svg">
+   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+   <link rel="stylesheet" href="assets/css/catalog-style.min.css">
+</head>
+<body>
+   <div class="wrapper">
+      <main class="main">
+         <div class="header-catalog">
+            <div class="container header-catalog__container">
+               <h1 class="header-catalog__title">Разделочные ножи</h1>
+               <nav class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                     <li class="breadcrumbs__item"><a href="http://localhost:3000" class="breadcrumbs__link"><span>Главная</span><svg>
+                              <use xlink:href="./assets/images/sprite.svg#arrow-icon-white"></use>
+                           </svg></a></li>
+                     <li class="breadcrumbs__item"><span class="breadcrumbs__current">Разделочные ножи</span></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+         <div class="catalog">
+            <div class="catalog__container container">
+               <div class="catalog__control">
+                  <select name="form[]" class="control">
+                     <option value="1">По популярности</option>
+                     <option value="2">Дешевле</option>
+                     <option value="3">Дороже</option>
+                     <option value="4">По рейтингу</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+      </main>
+   </div>
+   <script src="assets/js/catalogJS.min.js"></script>
+</body>
+</html>
