@@ -912,8 +912,9 @@ button {
     margin-bottom: 40px;
 }
 
-.main {
-    padding-bottom: 40px;
+.wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .choices {
