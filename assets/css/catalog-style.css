@@ -443,8 +443,9 @@
 }
 
 ul,
-ul li{
+ul li {
    list-style: none;
+}    
 
 .breadcrumbs__list {
     display: flex;
